@@ -1,0 +1,43 @@
+/*-----------------------------------------------
+Fonts by Jos Buivenga (exljbris) -> www.exljbris.nl
+-----------------------------------------------*/
+@font-face {
+	font-family: "Museo Sans 500";
+	src: url("type/MuseoSans_500.eot");
+	src: local("Museo Sans 500"), local("MuseoSans-500"),
+		url("type/MuseoSans_500.woff") format("woff"),
+		url("type/MuseoSans_500.otf") format("opentype"),
+		url("type/MuseoSans_500.svg#MuseoSans-500") format("svg");
+	}
+@font-face {
+	font-family: "Museo Sans 500 Italic";
+	src: url("type/MuseoSans_500_Italic.eot");
+	src: local("Museo Sans 500 Italic"), local("MuseoSans-500Italic"),
+		url("type/MuseoSans_500_Italic.woff") format("woff"),
+		url("type/MuseoSans_500_Italic.otf") format("opentype"),
+		url("type/MuseoSans_500_Italic.svg#MuseoSans-500Italic") format("svg");
+	}
+@font-face {
+	font-family: "Museo 300";
+	src: url("type/Museo300-Regular.eot");
+	src: local("Museo 300"), local("Museo-300"),
+		url("type/Museo300-Regular.woff") format("woff"),
+		url("type/Museo300-Regular.otf") format("opentype"),
+		url("type/Museo300-Regular.svg#Museo-300") format("svg");
+	}
+@font-face {
+	font-family: "Museo 500";
+	src: url("type/Museo500-Regular.eot");
+	src: local("Museo 500"), local("Museo-500"),
+		url("type/Museo500-Regular.woff") format("woff"),
+		url("type/Museo500-Regular.otf") format("opentype"),
+		url("type/Museo500-Regular.svg#Museo-500") format("svg");
+	}
+@font-face {
+	font-family: "Museo 700";
+	src: url("type/Museo700-Regular.eot");
+	src: local("Museo 700"), local("Museo-700"),
+		url("type/Museo700-Regular.woff") format("woff"),
+		url("type/Museo700-Regular.otf") format("opentype"),
+		url("type/Museo700-Regular.svg#Museo-700") format("svg");
+	}

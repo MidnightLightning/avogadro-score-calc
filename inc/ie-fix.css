@@ -1,0 +1,4 @@
+div.scrolling_table { height: 250px; overflow:auto; position:relative;}
+div.scrolling_table thead tr { background-color:#FFF; }
+div.scrolling_table thead th { position:relative; top:expression(this.offsetParent.scrollTop); }
+

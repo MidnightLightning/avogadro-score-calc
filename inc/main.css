@@ -1,0 +1,43 @@
+@import url('fonts.css');
+
+body { background: #b8b8b8 url('/img/bg_page.png') repeat-x; font-size:10pt; }
+div#site-message { border:solid 1px #993; border-width:0 0 1px 0; background-color:#FF9; padding:3px; font-size:8pt; }
+div#wrapper { width:960px; padding:0; margin: 0 auto; }
+
+div#top-banner { background:#FFF url('/img/bg_header.png') repeat-x; min-height:73px; margin:0; padding:5px; position:relative; }
+div#top-banner h1 { margin-top:9px; font-size:12pt; font-family:"Museo 500", sans-serif; font-weight:normal; }
+div#top-banner h1 > a { text-decoration:none; color:inherit; }
+
+div#navigation { font-family:"Museo 300", sans-serif; position:absolute; top:51px; left:0px; width:958px; }
+div#navigation, div#navigation ul { padding:0; margin:0; list-style:none; }
+div#navigation li > a { display:block; font-size:10pt; width:150px; padding:2px 8px; text-decoration:none; color:#000; }
+div#navigation > ul > li { position:relative; }
+div#navigation li { float:left; width:166px; }
+div#navigation li li > a { line-height:1.0em; padding:5px 8px;}
+div#navigation li ul { position:absolute; width:166px; left:-999em; background-color:#DDD; border:solid 1px #666; } /* Shunt all sub-menus off the left side of the page */
+div#navigation li:hover, div#navigation li.sfhover { background-color:#BBB; }
+div#navigation li:hover ul, div#navigation li.sfhover ul { left: -1px; } /* When one list item is hovered over, bring its child list into view */
+
+div#login { float:right; font-size:0.8em; margin:0 5px 0 0; padding:0; text-align:right; }
+div#login p { margin:0; padding:0; }
+
+div#body { background-color:#FFF; border:solid 1px #666; }
+div#content { padding:0 5px; }
+div#content p { margin:0 0 0.5em 0; padding:0; }
+div#content p.errorMsg { color:#300; background-color:#FEA; border:solid 1px #300; padding: 10px; }
+div#content .doc_link img { vertical-align:-3px; padding:0 3px; }
+div#content h1, div#content h2, div#content h3, div#content h4 { font-family:"Museo 500", sans-serif; font-weight:normal; }
+div#content > h2 { margin-top:0; }
+div#content table td { padding: 2px 3px; border-style:solid; border-color:#CCC; border-width:1px 1px 0 0; }
+div#content table th { font-size:10pt; font-family:"Museo 300", sans-serif; font-weight:normal; border-style:outset; border-color:#CCF; border-width:1px; background-color:#CCF; padding:2px 3px;}
+div#content table th a { text-decoration:none; color:inherit; }
+tr.odd_row { background-color:#EEE; }
+tr.even_row { background-color:#FFF; }
+table#competition_results_list { width:100%; }
+table#events_table { width:100%; margin-bottom:1em; }
+
+div#footer { font-size:0.8em; font-family:sans-serif; color:#FFF; padding-left:5px; margin-top:5px; }
+
+td.var-entry, td.var-entry input { width:70px; }
+td.var-entry { background: #FFE; }
+td.raw-score, td.raw-score input { width:120px; }
