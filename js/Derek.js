@@ -12,7 +12,10 @@ var computeRawScoresHardCoded = function(){
 			//Loop through each column of the current row.
 			$(this).find("td").each(function(columnIndex){
 				if(columnIndex == 3){
-					rowLoadSupported = $(this).find("input").val();
+					//Finds the input child of the current colmun and sets the rowLoadSupported variable to be the value of the input.
+					rowLoadSupported = $(this).find("input").val(); 
+					//With jQuery, if nothing is in the "()" then it is a "getter".
+					//If there is a value in the "()", then it is a "setter".
 				}else if(columnIndex == 4){
 					rowMass = $(this).find("input").val();
 				}else if(columnIndex == 5){
