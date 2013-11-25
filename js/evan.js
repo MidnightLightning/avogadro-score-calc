@@ -20,7 +20,7 @@ $(function()
 function findVariables()
 {
 	//Current formula
-	var formula = avgo.EventFormula;
+	var formula = avgo.eventFormula;
 	//Returns variable strings inside square brackets and puts them into an array varFound
-	var varFound = formula.match(/[^[\]]+(?=])/g);
+	avgo.forumulaVariables = formula.match(/[^[\]]+(?=])/g);
 }
