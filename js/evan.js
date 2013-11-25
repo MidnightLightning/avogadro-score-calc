@@ -16,3 +16,11 @@ $(function()
 		}
 	});
 });
+
+function findVariables()
+{
+	//Current formula
+	var formula = avgo.EventFormula;
+	//Returns variable strings inside square brackets and puts them into an array varFound
+	var varFound = formula.match(/[^[\]]+(?=])/g);
+}
