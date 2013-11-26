@@ -2,6 +2,7 @@ $(function(){
 	$(".var-entry").change(rawBoxDisabler);
 	$(".raw-score").change(varBoxDisabler);
 });
+
 var rawBoxDisabler = function(){
 	//Loop through every row in the table.
 	$("#event_raw_table").find("tr").each(function(rowIndex){
@@ -25,6 +26,11 @@ var rawBoxDisabler = function(){
 					//Check to make sure all fields have values, then compute score and set score box.
 					if(rowLoadSupported != "" || rowMass != "" || rowLineClearance != ""){
 						$(this).find("input").attr("disabled", true);
+						if(rowLoadSupported != "" && rowMass != "" && rowLineClearance != ""){
+						} else{
+							$(this).find("input").val("");	
+						}
+						//$(this).find("input").val("");
 					}
 					else
 					{
@@ -37,5 +43,21 @@ var rawBoxDisabler = function(){
 };
 
 var varBoxDisabler = function(){
-
+	$("#event_raw_table").find("tr").each(function(rowIndex){
+		if(rowIndex > 1 && $(this).find("td").length > 5){
+			var rawScore = "NULL";
+			$($($(this).find("td")).get().reverse()).each(function(columnIndex){
+				if(columnIndex == 1 && $(this).find("input").val() != "" && !$(this).find("input").is(":disabled")){
+					rawScore = $(this).find("input").val();	
+				}
+				if(columnIndex >= 2 && columnIndex <= 4){
+					if (rawScore != "NULL"){
+						$(this).find("input").attr("disabled", true);	
+					} else{
+						$(this).find("input").attr("disabled", false);	
+					}
+				}
+			});
+		}
+	});
 };
