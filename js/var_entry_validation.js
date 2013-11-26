@@ -34,7 +34,15 @@ function js_validate_var_entry(){
 			}
 			if(var_num.length > 1 && Math.abs(var_num[1]) > max_val){
 				num_overflow = true; //indicate update needed
-				var_num[1] = max_val; //update right side to max
+				var round_digit = var_num[1].charAt(9); //10th digit
+				var_num[1] = var_num[1].substring(0, 9); //digits 1 to 9 are digits included in new number
+				if(round_digit >= 5){
+					var_num[1] = +var_num[1] + 1;
+				}
+				if(var_num[1] > max_val){
+					var_num[1] = max_val; //update right side to max
+				}
+				
 			}
 			if(num_overflow){ //if update is needed
 				if(var_num.length > 1){ //if there is a decimal in the number
