@@ -35,6 +35,7 @@ var computeRawScores = function(){
 						if(canSet){
 							var result = eval(avgo.eventFormula);
 							$(this).find("input").val(result);
+							js_validate($(this).find("input"));
 						}
 						
 					}
