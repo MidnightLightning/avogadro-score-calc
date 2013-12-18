@@ -91,9 +91,11 @@ var varBoxDisabler = function(){
 				//Disable var-entry boxes if needed
 				if(columnIndex >= 2 && columnIndex <= numVariables + 1){
 					if (rawScore != "NULL"){
-						$(this).find("input").attr("disabled", true);	
+						$(this).find("input").attr("disabled", true);
+						$(this).find("input").css('background-color', '#E8E8E8');	
 					} else{
-						$(this).find("input").attr("disabled", false);	
+						$(this).find("input").attr("disabled", false);
+						$(this).find("input").css('background-color', 'white');	
 					}
 				}
 			});
@@ -103,6 +105,7 @@ var varBoxDisabler = function(){
 
 var rawBoxDisabler = function(){
 	var disableFlag = false;
+	var varDisabled = false;
 	var count = 0;
 	var allFull = false;
 	//Loop through every row in the table.
@@ -117,6 +120,7 @@ var rawBoxDisabler = function(){
 				//Check for values in var-entry textboxes
 				if (columnIndex >= 3 && columnIndex < numVariables + 3){
 					variableValue = $(this).find("input").val();
+					varDisabled = $(this).find("input").is(":disabled");
 					if (variableValue != ""){
 						//A var-entry textbox has a value in it
 						disableFlag = true;
@@ -131,17 +135,22 @@ var rawBoxDisabler = function(){
 				if (columnIndex == numVariables + 3){
 					if(disableFlag){
 						$(this).find("input").attr("disabled", true);
+						$(this).find("input").css('background-color', '#E8E8E8')
 					}
 					else{
-						$(this).find("input").attr("disabled", false);	
+						$(this).find("input").attr("disabled", false);
+						$(this).find("input").css('background-color', 'white')	
 					}
-					disableFlag = false;
-					count = 0;
+					//disableFlag = false;
+					//count = 0;
 					//Clear raw-score box if not all var-entry boxes are filled
-					if (!allFull){
+					if (!allFull && !varDisabled){
 						$(this).find("input").val("");	
 					}
 					allFull = false;
+					varDisabled = false;
+					disableFlag = false;
+					count = 0;
 				}
 			});
 		}
