@@ -24,7 +24,8 @@ var rawBoxDisabler = function(){
 						disableFlag = true;
 						count++;
 						if (count == numVariables){
-							allFull = true;	
+							allFull = true;
+							count = 0;
 						}
 					}
 				}
@@ -42,6 +43,7 @@ var rawBoxDisabler = function(){
 					if (!allFull){
 						$(this).find("input").val("");	
 					}
+					allFull = false;
 				}
 			});
 		}
